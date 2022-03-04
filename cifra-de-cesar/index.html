@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifra de Cesar</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <main>
+        <div class="input-button">
+            <span id="label">Key: </span>
+            <button onclick="prev()">-</button>
+            <span id="key">1</span>
+            <button onclick="next()">+</button><br/><br/>
+            <input type="text" id="input"/>
+            <button onclick="calculate()" id="big">Calcular</button>
+            <span id="output"></span>
+        </div>
+        <div class="imagem">
+            <img src="./cifra-de-cesar.jpg" alt="Imagem Cifra de Cesar" class="imagem-cesar">
+        </div>
+        
+    </main>
+
+    <script src="./index.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+#Cifra de Cesar
+
+A B C D E F G H I J  K  L  M
+0 1 2 3 4 5 6 7 8 9  10 11 12
+
+N  O  P  Q  R  S  T  U  V  W  X  Y  Z
+13 14 15 16 17 18 19 20 21 22 23 24 25
+
+-Soma-se 7 no descolamento de determinada letra
+
+Exemplo: ABACATE -> Palavra normal
+         HIHJHAL -> Palavra cifrada
+
+-Para voltar a palavra original é só diminuir 7
+
+#Usando cifra de cesar em javascript
+
+Tabela ASC
+
+A  B  C  D  E  F  G  H  I  J  K  L  M
+65 66 67 68 69 70 71 72 73 74 75 76 77
+
+N  O  P  Q  R  S  T  U  V  W  X  Y  Z
+78 79 80 81 82 83 84 85 86 87 88 89 90
+
+Função javascript : charCodeAt() -> encontra o numero
+onde a letra está posicionada
+
+(codigoDaLetra + descolamento) % tamDoAlfabeto
+
+
+        
+/*Segunda forma de fazer apenas js
+
+var frase = "";
+var alfa = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var frase = prompt("Introduza a frase:").toLowerCase();
+var off = prompt("Introduza o deslocamento:");
+var x = parseInt(off);
+var keep = [];
+
+for (var i = 0; i < frase.length; i++)
+{
+ if(frase[i] != ' ')
+ {
+   for (var j = 0; j < alfa.length; j++)
+   {
+     if (frase[i] == alfa[j])
+     {
+       keep[i] = alfa[(j + x) % alfa.length];
+       break;
+     }
+   }
+ }
+ else
+ {
+   keep[i] = ' ';
+ }
+}
+alert(keep.join(""));*/
